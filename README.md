@@ -18,8 +18,9 @@ This is a Customised WordPress themes specifically for the company Master Soluti
 
 
 ## Demo
+![Screen Recording 2023-06-05 at 12 40 43](https://github.com/LinWenhao5/Master-Solutions-WordPress-Thema/assets/76943467/a4db2c23-662e-4a9d-8ec9-4d2f83375a51)
 
-[Alt Text](https://s11.gifyu.com/images/Su6v1.gif)
+
 ## Installation
 You can download it in [release](https://github.com/LinWenhao5/Master-Solutions-WordPress-Thema/releases/tag/publish) and migrate it to your own wordpress site
 
