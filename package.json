@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "wp-scripts start src/index.js blocks/hero-home.js blocks/faq.js blocks/section-diensten-software.js blocks/blog-static.js blocks/section-nieuwsbrief.js blocks/section-grid-small.js blocks/section-multicolumn-grid.js blocks/child-column.js blocks/section-grid-large.js blocks/top-grid-large.js blocks/text-area.js blocks/grid-text.js blocks/grid-image.js blocks/faq-content.js blocks/faq-subtitle.js blocks/faq-item.js blocks/heading.js blocks/text-block.js blocks/div-block.js blocks/button.js"
+  },
+  "dependencies": {
+    "@wordpress/icons": "^9.24.0",
+    "@wordpress/scripts": "^26.4.0"
+  }
+}

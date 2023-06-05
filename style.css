@@ -1,0 +1,12 @@
+/*
+    Theme Name: master-solutions-theme
+    Author: Lin Wenhao
+    Version: 1.0
+*/
+
+.our-placeholder-block {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.65rem;
+    background: linear-gradient(180deg, #dedede, #adadad);
+}
