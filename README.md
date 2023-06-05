@@ -19,7 +19,7 @@ This is a Customised WordPress themes specifically for the company Master Soluti
 
 ## Demo
 
-![Alt Text](https://s11.gifyu.com/images/Su6v1.gif)
+[Alt Text](https://s11.gifyu.com/images/Su6v1.gif)
 ## Installation
 You can download it in [release](https://github.com/LinWenhao5/Master-Solutions-WordPress-Thema/releases/tag/publish) and migrate it to your own wordpress site
 
