@@ -221,6 +221,10 @@ __webpack_require__.r(__webpack_exports__);
     buttonText: {
       type: "string",
       default: "Meer over Security Bridge"
+    },
+    buttonColor: {
+      type: "string",
+      default: "button-22 w-button"
     }
   },
   save: SaveComponent
@@ -238,7 +242,17 @@ function EditComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
     onClick: buttonHandler,
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+    isPressed: props.attributes.buttonColor === "button-22 w-button",
+    onClick: () => props.setAttributes({
+      buttonColor: "button-22 w-button"
+    })
+  }, "Orange")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
+    isPressed: props.attributes.buttonColor === "button-7 product w-button",
+    onClick: () => props.setAttributes({
+      buttonColor: "button-7 product w-button"
+    })
+  }, "Blue"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "w-node-_370734ad-4f23-3a69-a85a-2733e5383acb-495a224b",
     className: "div-block-60"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
@@ -303,7 +317,7 @@ function EditComponent(props) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     allowedFormats: [],
     tagName: "a",
-    className: `button-22 w-button`,
+    className: props.attributes.buttonColor,
     value: props.attributes.buttonText,
     onChange: x => props.setAttributes({
       buttonText: x
@@ -343,7 +357,7 @@ function SaveComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, props.attributes.listTitle3), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("br", null), props.attributes.listContent3)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     bind: "370734ad-4f23-3a69-a85a-2733e5383ae7",
     href: props.attributes.linkObject.url,
-    className: "button-22 w-button"
+    className: props.attributes.buttonColor
   }, props.attributes.buttonText));
 }
 })();

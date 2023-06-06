@@ -75,9 +75,14 @@ function EditComponent(props) {
 }
 
 function SaveComponent(props) {
-    return <div id="w-node-_370734ad-4f23-3a69-a85a-2733e5383ac9-495a224b" className="div-block-59"><img
-            src={props.attributes.imgURL} loading="lazy" width="800" height="500" alt=""
-            className="image-25"/>
+    return(
+        <div id="w-node-_370734ad-4f23-3a69-a85a-2733e5383ac9-495a224b" className="div-block-59">
+            <img src={`${props.attributes.imgURL}`} loading="lazy" width="668"
+                 id="w-node-f58acfb4-62dd-8cc7-b977-7ee2f46348f6-495a224b"
+                 srcSet={`${props.attributes.imgURL} 500w, ${props.attributes.imgURL} 800w, ${props.attributes.imgURL} 1080w, ${props.attributes.imgURL} 1500w`}
+                 sizes="(max-width: 991px) 100vw, (max-width: 1279px) 39vw, (max-width: 1439px) 40vw, 560px" alt=""
+                 className="image-23"/>
         </div>
+    )
 
 }

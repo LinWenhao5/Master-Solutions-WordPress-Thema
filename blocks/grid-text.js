@@ -24,7 +24,8 @@ registerBlockType("blocktheme/grid-text", {
         heading: {type: "string", default: "Lorem ipsum"},
         text: {type: "string", default: "Lorem ipsum"},
         linkObject: {type: "object", default: {url: ""} },
-        buttonText: {type: "string", default: "Meer over Security Bridge"}
+        buttonText: {type: "string", default: "Meer over Security Bridge"},
+        buttonColor: {type: "string", default: "button-22 w-button"}
     },
     save: SaveComponent,
 });
@@ -44,6 +45,12 @@ function EditComponent(props) {
             <BlockControls>
                 <ToolbarGroup>
                     <ToolbarButton onClick={buttonHandler} icon={link} />
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.buttonColor === "button-22 w-button"} onClick={()=>props.setAttributes({buttonColor: "button-22 w-button"})}>Orange</ToolbarButton>
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.buttonColor === "button-7 product w-button"} onClick={()=>props.setAttributes({buttonColor: "button-7 product w-button"})}>Blue</ToolbarButton>
                 </ToolbarGroup>
             </BlockControls>
             <div id="w-node-_370734ad-4f23-3a69-a85a-2733e5383acb-495a224b" className="div-block-60">
@@ -86,7 +93,7 @@ function EditComponent(props) {
                     />
                 </ul>
                 <RichText allowedFormats={[]}
-                          tagName="a" className={`button-22 w-button`} value={props.attributes.buttonText} onChange={(x)=>props.setAttributes({ buttonText: x})}
+                          tagName="a" className={props.attributes.buttonColor} value={props.attributes.buttonText} onChange={(x)=>props.setAttributes({ buttonText: x})}
                 />
             </div>
             {isLinkPickerVisible && (
@@ -115,7 +122,7 @@ function SaveComponent(props) {
                     <br/>{props.attributes.listContent3}
                 </li>
             </ul>
-            <a bind="370734ad-4f23-3a69-a85a-2733e5383ae7" href={props.attributes.linkObject.url} className="button-22 w-button">{props.attributes.buttonText}</a>
+            <a bind="370734ad-4f23-3a69-a85a-2733e5383ae7" href={props.attributes.linkObject.url} className={props.attributes.buttonColor}>{props.attributes.buttonText}</a>
         </div>
 
 }

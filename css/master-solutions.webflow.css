@@ -39,7 +39,7 @@
   border-radius: 2px;
 }
 
-.w-checkbox-input--inputType-custom.w--redirected-checked {
+.w-checkbox-input--inputType-custom.w--.div-block-60irected-checked {
   background-color: #3898ec;
   background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
   background-position: 50%;
@@ -5878,6 +5878,7 @@ img {
   padding-top: 0;
   padding-bottom: 0;
   display: flex;
+  justify-content: space-between;
 }
 
 .grid-14.eerste {
@@ -5927,10 +5928,8 @@ img {
 }
 
 .div-block-60 {
-  margin-top: 0;
-  margin-right: 140px;
-  padding-top: 0;
-  padding-left: 125px;
+  width: 50vw;
+  padding: 10px;
 }
 
 .div-block-60.tweede {
@@ -5972,10 +5971,9 @@ img {
 }
 
 .div-block-61 {
-  justify-content: center;
+  display: flex;
   padding-top: 40px;
   padding-bottom: 40px;
-  display: flex;
 }
 
 .collection-list-wrapper-4 {
@@ -8151,6 +8149,7 @@ img {
     flex-direction: column;
     padding-bottom: 20px;
     display: flex;
+    justify-content: space-between;
   }
 
   .grid-14.tweede {
