@@ -4,11 +4,45 @@
 			<div class="text-block-19"><strong>Master</strong> Solutions</div>
 		</a>
 		<nav role="navigation" class="f-navigation-menu-2 w-nav-menu">
-			<a href="<?php echo site_url('/diensten')?>" class="f-navigation-link-2 w-nav-link">Diensten</a>
-			<a href="<?php echo site_url('/product')?>" class="f-navigation-link-2 w-nav-link">Software</a>
-			<a href="<?php echo site_url('/over-ons')?>" class="f-navigation-link-2 w-nav-link">Over ons</a>
-			<a href="<?php echo site_url('/contact')?>" class="f-navigation-link-2 w-nav-link">Contact</a>
-			<a href="<?php echo site_url('/blog')?>" class="f-navigation-link-2 w-nav-link">Blog</a>
+
+			<?php
+			$menuLocations = get_nav_menu_locations();
+			$meunID = $menuLocations['headerMenu'];
+			$menu_items = wp_get_nav_menu_items($meunID);
+			foreach ($menu_items as $menu_item) {
+				// Check if the current item has a parent (submenu item)
+				if ($menu_item->menu_item_parent) {
+					continue; // Skip submenu items
+				}
+
+				// Output the top-level menu item
+				echo '<div class="dropdown"><a class="dropbtn f-navigation-link-2 w-nav-link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+
+				// Get the submenu items
+				$submenu_items = get_submenu_items($menu_item->ID, $menu_items);
+
+				// Output the submenu if it exists
+				if ($submenu_items) {
+					echo '<div class="dropdown-content">';
+					foreach ($submenu_items as $submenu_item) {
+						echo '<a href="' . $submenu_item->url . '">' . $submenu_item->title . '</a>';
+					}
+					echo '</div>';
+				}
+                echo '</div>';
+			}
+
+			function get_submenu_items($parent_id, $menu_items) {
+				$submenu_items = array();
+				foreach ($menu_items as $menu_item) {
+					if ($menu_item->menu_item_parent == $parent_id) {
+						$submenu_items[] = $menu_item;
+					}
+				}
+				return $submenu_items;
+			}
+
+			?>
 		</nav>
 		<div class="f-navigation-content-2">
 			<div class="f-navigation-menu-button-2 w-nav-button">
