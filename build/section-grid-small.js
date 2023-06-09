@@ -152,7 +152,11 @@ __webpack_require__.r(__webpack_exports__);
   attributes: {
     text: {
       type: "string",
-      default: "Je bedrijf is afhankelijk van stabiele IT-voorzieningen. Daarom zetten wij onze decennialange ervaring in om ervoor te zorgen dat jij je dagelijkse werkzaamheden zonder gedoe kunt uitvoeren. Apparaten aanschaffen, installeren en updaten. Verbindingsproblemen oplossen en licenties beheren. Je netwerk beveiligen… Regelen we allemaal voor je. Jij hebt wel wat beters te doen dan IT beheren, toch?"
+      default: ""
+    },
+    className: {
+      type: "string",
+      default: "grid-10"
     },
     imgID: {
       type: "number"
@@ -203,10 +207,20 @@ function EditComponent(props) {
         onClick: open
       }, "Choose Image");
     }
-  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+    isPressed: props.attributes.className === "grid-10",
+    onClick: () => props.setAttributes({
+      className: "grid-10"
+    })
+  }, "Orange")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+    isPressed: props.attributes.className === "grid-10-blue",
+    onClick: () => props.setAttributes({
+      className: "grid-10-blue"
+    })
+  }, "Blue"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "section-16 wf-section"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "w-layout-grid grid-10"
+    className: `w-layout-grid ${props.attributes.className}`
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "div",
     className: "text-block-37",

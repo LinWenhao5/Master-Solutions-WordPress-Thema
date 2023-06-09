@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@wordpress/icons/build-module/library/link.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@wordpress/icons/build-module/library/link.js ***!
-  \********************************************************************/
+/***/ "../node_modules/@wordpress/icons/build-module/library/link.js":
+/*!*********************************************************************!*\
+  !*** ../node_modules/@wordpress/icons/build-module/library/link.js ***!
+  \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -166,7 +166,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/icons */ "./node_modules/@wordpress/icons/build-module/library/link.js");
+/* harmony import */ var _wordpress_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/icons */ "../node_modules/@wordpress/icons/build-module/library/link.js");
 
 
 
@@ -180,27 +180,7 @@ __webpack_require__.r(__webpack_exports__);
     align: ["full"]
   },
   attributes: {
-    listTitle1: {
-      type: "string",
-      default: "Lorem ipsum"
-    },
-    listContent1: {
-      type: "string",
-      default: "Lorem ipsum"
-    },
-    listTitle2: {
-      type: "string",
-      default: "Lorem ipsum"
-    },
-    listContent2: {
-      type: "string",
-      default: "Lorem ipsum"
-    },
-    listTitle3: {
-      type: "string",
-      default: "Lorem ipsum"
-    },
-    listContent3: {
+    listContent: {
       type: "string",
       default: "Lorem ipsum"
     },
@@ -269,52 +249,13 @@ function EditComponent(props) {
     onChange: x => props.setAttributes({
       text: x
     })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    role: "list",
-    className: "list-4"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "li",
-    className: "list-item",
-    value: props.attributes.listTitle1,
-    onChange: x => props.setAttributes({
-      listTitle1: x
-    })
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "p",
-    className: "text-block",
-    value: props.attributes.listContent1,
+    value: props.attributes.listContent,
     onChange: x => props.setAttributes({
-      listContent1: x
+      listContent: x
     })
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "li",
-    className: "list-item",
-    value: props.attributes.listTitle2,
-    onChange: x => props.setAttributes({
-      listTitle2: x
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "p",
-    className: "text-block",
-    value: props.attributes.listContent2,
-    onChange: x => props.setAttributes({
-      listContent2: x
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "li",
-    className: "list-item",
-    value: props.attributes.listTitle3,
-    onChange: x => props.setAttributes({
-      listTitle3: x
-    })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    tagName: "p",
-    className: "text-block",
-    value: props.attributes.listContent3,
-    onChange: x => props.setAttributes({
-      listContent3: x
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     allowedFormats: [],
     tagName: "a",
     className: props.attributes.buttonColor,
@@ -338,28 +279,153 @@ function EditComponent(props) {
   }, "Confirm Link")));
 }
 function SaveComponent(props) {
+  const {
+    heading,
+    text,
+    listContent,
+    linkObject,
+    buttonColor,
+    buttonText
+  } = props.attributes;
+  const htmlString = `
+    <h1 class="heading-26">${heading}</h1>
+    <div class="text-block-36">${text}</div>
+    <p>${listContent}</p>
+    <a bind="370734ad-4f23-3a69-a85a-2733e5383ae7" href="${linkObject.url}" class="${buttonColor}">${buttonText}</a>
+  `;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "w-node-_370734ad-4f23-3a69-a85a-2733e5383acb-495a224b",
-    className: "div-block-60"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", {
-    className: "heading-26"
-  }, props.attributes.heading), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "text-block-36"
-  }, props.attributes.text), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    role: "list",
-    className: "list-4"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "list-item"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, props.attributes.listTitle1), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("br", null), props.attributes.listContent1), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "list-item"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, props.attributes.listTitle2), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("br", null), props.attributes.listContent2), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "list-item"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, props.attributes.listTitle3), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("br", null), props.attributes.listContent3)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    bind: "370734ad-4f23-3a69-a85a-2733e5383ae7",
-    href: props.attributes.linkObject.url,
-    className: props.attributes.buttonColor
-  }, props.attributes.buttonText));
+    className: "div-block-60",
+    dangerouslySetInnerHTML: {
+      __html: htmlString
+    },
+    style: {
+      whiteSpace: 'pre-wrap',
+      wordWrap: 'break-word'
+    }
+  });
 }
+
+// backup
+
+// registerBlockType("blocktheme/grid-text", {
+//     title: "Grid Text",
+//     edit: EditComponent,
+//     supports: {
+//         align: ["full"],
+//     },
+//     attributes: {
+//         listTitle1: {type: "string", default: "Lorem ipsum"},
+//         listContent1: {type: "string", default: "Lorem ipsum"},
+//         listTitle2: {type: "string", default: "Lorem ipsum"},
+//         listContent2: {type: "string", default: "Lorem ipsum"},
+//         listTitle3: {type: "string", default: "Lorem ipsum"},
+//         listContent3: {type: "string", default: "Lorem ipsum"},
+//         heading: {type: "string", default: "Lorem ipsum"},
+//         text: {type: "string", default: "Lorem ipsum"},
+//         linkObject: {type: "object", default: {url: ""} },
+//         buttonText: {type: "string", default: "Meer over Security Bridge"},
+//         buttonColor: {type: "string", default: "button-22 w-button"}
+//     },
+//     save: SaveComponent,
+// });
+//
+// function EditComponent(props) {
+//     const [isLinkPickerVisible, setIsLinkPickerVisible] = useState(false)
+//
+//     function buttonHandler(props) {
+//         setIsLinkPickerVisible(prev => !prev);
+//     }
+//
+//     function handleLinkChange(newLink) {
+//         props.setAttributes({linkObject: newLink});
+//     }
+//     return (
+//         <>
+//             <BlockControls>
+//                 <ToolbarGroup>
+//                     <ToolbarButton onClick={buttonHandler} icon={link} />
+//                 </ToolbarGroup>
+//                 <ToolbarGroup>
+//                     <ToolbarButton isPressed={props.attributes.buttonColor === "button-22 w-button"} onClick={()=>props.setAttributes({buttonColor: "button-22 w-button"})}>Orange</ToolbarButton>
+//                 </ToolbarGroup>
+//                 <ToolbarGroup>
+//                     <ToolbarButton isPressed={props.attributes.buttonColor === "button-7 product w-button"} onClick={()=>props.setAttributes({buttonColor: "button-7 product w-button"})}>Blue</ToolbarButton>
+//                 </ToolbarGroup>
+//             </BlockControls>
+//             <div id="w-node-_370734ad-4f23-3a69-a85a-2733e5383acb-495a224b" className="div-block-60">
+//
+//                 <RichText
+//                     tagName="h1" className="heading-26"
+//                     value={props.attributes.heading} onChange={(x)=>props.setAttributes({ heading: x})}
+//                 />
+//
+//                 <RichText
+//                     tagName="div" className="text-block-36"
+//                     value={props.attributes.text} onChange={(x)=>props.setAttributes({ text: x})}
+//                 />
+//
+//
+//                 <ul role="list" className="list-4">
+//                     <RichText
+//                         tagName="li" className="list-item"
+//                         value={props.attributes.listTitle1} onChange={(x)=>props.setAttributes({ listTitle1: x})}
+//                     />
+//                     <RichText
+//                         tagName="p" className="text-block"
+//                         value={props.attributes.listContent1} onChange={(x)=>props.setAttributes({ listContent1: x})}
+//                     />
+//                     <RichText
+//                         tagName="li" className="list-item"
+//                         value={props.attributes.listTitle2} onChange={(x)=>props.setAttributes({ listTitle2: x})}
+//                     />
+//                     <RichText
+//                         tagName="p" className="text-block"
+//                         value={props.attributes.listContent2} onChange={(x)=>props.setAttributes({ listContent2: x})}
+//                     />
+//                     <RichText
+//                         tagName="li" className="list-item"
+//                         value={props.attributes.listTitle3} onChange={(x)=>props.setAttributes({ listTitle3: x})}
+//                     />
+//                     <RichText
+//                         tagName="p" className="text-block"
+//                         value={props.attributes.listContent3} onChange={(x)=>props.setAttributes({ listContent3: x})}
+//                     />
+//                 </ul>
+//                 <RichText allowedFormats={[]}
+//                           tagName="a" className={props.attributes.buttonColor} value={props.attributes.buttonText} onChange={(x)=>props.setAttributes({ buttonText: x})}
+//                 />
+//             </div>
+//             {isLinkPickerVisible && (
+//                 <Popover position="middle center">
+//                     <LinkControl setttings={[]} value={props.attributes.linkObject} onChange={handleLinkChange} />
+//                     <button variant="primary" onClick={() => setIsLinkPickerVisible(false)} style={{ display:"block", width: "100%" }}>
+//                         Confirm Link
+//                     </button>
+//                 </Popover>
+//             )}
+//         </>
+//     );
+// }
+//
+// function SaveComponent(props) {
+//     return <div id="w-node-_370734ad-4f23-3a69-a85a-2733e5383acb-495a224b" className="div-block-60">
+//             <h1 className="heading-26">{props.attributes.heading}</h1>
+//             <div className="text-block-36">{props.attributes.text}</div>
+//             <ul role="list" className="list-4">
+//                 <li className="list-item"><strong>{props.attributes.listTitle1}</strong>
+//                     <br/>{props.attributes.listContent1}
+//                 </li>
+//                 <li className="list-item"><strong>{props.attributes.listTitle2}</strong>
+//                     <br/>{props.attributes.listContent2}</li>
+//                 <li className="list-item"><strong>{props.attributes.listTitle3}</strong>
+//                     <br/>{props.attributes.listContent3}
+//                 </li>
+//             </ul>
+//             <a bind="370734ad-4f23-3a69-a85a-2733e5383ae7" href={props.attributes.linkObject.url} className={props.attributes.buttonColor}>{props.attributes.buttonText}</a>
+//         </div>
+//
+// }
 })();
 
 /******/ })()

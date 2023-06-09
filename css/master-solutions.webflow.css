@@ -3144,12 +3144,12 @@ img {
   display: flex;
   position: static;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+  margin-bottom: 5px;
 }
 
 .button-7.product {
   background-color: #49506c;
   margin-top: 0;
-  margin-bottom: 82px;
 }
 
 .button-7.diensten {
@@ -5688,7 +5688,6 @@ img {
 
 .text-block-36 {
   align-self: center;
-  margin-top: 20px;
   font-family: Inter variablefont slnt wght, sans-serif;
   font-size: 18px;
 }
@@ -5731,6 +5730,13 @@ img {
 
 .grid-10 {
   background-color: #c2831b;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr .5fr;
+}
+
+.grid-10-blue {
+  background-color: #1c2035;
+  color: #FFFFFF;
   grid-template-rows: auto;
   grid-template-columns: 1fr .5fr;
 }
@@ -5812,6 +5818,10 @@ img {
 
 .div-block-56 {
   background-color: #f9e9d0;
+}
+
+.div-block-56-light-blue {
+  background-color: #C7CBD8;
 }
 
 .div-block-57 {
@@ -5906,7 +5916,6 @@ img {
 .heading-26 {
   color: #5f441b;
   flex-direction: column;
-  padding-bottom: 10px;
   padding-right: 0;
   font-family: Inter variablefont slnt wght, sans-serif;
   font-weight: 500;

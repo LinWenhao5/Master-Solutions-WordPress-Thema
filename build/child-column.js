@@ -168,6 +168,10 @@ __webpack_require__.r(__webpack_exports__);
     text: {
       type: "string",
       default: "Je netwerk is de ruggengraat van je bedrijf. Grote kans dat als daar iets mis gaat, je bedrijf plat ligt. Daarom wil je je netwerk door vakkundige, ervaren handen laten beheren."
+    },
+    className: {
+      type: "string",
+      default: "div-block-56"
     }
   },
   save: SaveComponent
@@ -217,9 +221,19 @@ function EditComponent(props) {
         onClick: open
       }, "Choose Image");
     }
-  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+    isPressed: props.attributes.className === "div-block-56",
+    onClick: () => props.setAttributes({
+      className: "div-block-55"
+    })
+  }, "light yellow")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToolbarButton, {
+    isPressed: props.attributes.className === "div-block-56-light-blue",
+    onClick: () => props.setAttributes({
+      className: "div-block-56-light-blue"
+    })
+  }, "light blue"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "w-node-_7b04c8fa-b584-060f-7234-85317b2096eb-495a224b",
-    className: "div-block-55"
+    className: props.attributes.className
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText, {
     tagName: "h1",
     className: "heading-24",
@@ -244,7 +258,7 @@ function EditComponent(props) {
 function SaveComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "w-node-_7b04c8fa-b584-060f-7234-85317b2096eb-495a224b",
-    className: "div-block-55"
+    className: props.attributes.className
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", {
     className: "heading-24"
   }, props.attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

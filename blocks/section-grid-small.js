@@ -1,6 +1,6 @@
 import apiFetch from "@wordpress/api-fetch"
-import { Button, PanelBody, PanelRow } from "@wordpress/components"
-import { InnerBlocks, InspectorControls, RichText, MediaUpload, MediaUploadCheck} from "@wordpress/block-editor";
+import { Button, PanelBody, PanelRow, ToolbarGroup, ToolbarButton } from "@wordpress/components"
+import { InnerBlocks, InspectorControls, RichText, MediaUpload, MediaUploadCheck, BlockControls } from "@wordpress/block-editor";
 import { registerBlockType } from "@wordpress/blocks";
 import { useEffect } from "@wordpress/element"
 
@@ -13,11 +13,11 @@ registerBlockType("blocktheme/section-grid-small", {
     attributes: {
         text: {
             type: "string",
-            default: "Je bedrijf is afhankelijk van stabiele IT-voorzieningen. Daarom zetten wij onze decennialange ervaring in om ervoor te zorgen dat jij je dagelijkse werkzaamheden zonder gedoe kunt uitvoeren. Apparaten aanschaffen, installeren en updaten. Verbindingsproblemen oplossen en licenties beheren. Je netwerk beveiligen… Regelen we allemaal voor je. Jij hebt wel wat beters te doen dan IT beheren, toch?"
+            default: ""
         },
+        className: {type: "string", default: "grid-10"},
         imgID: { type: "number" },
         imgURL: { type: "string" ,default: preloadImage.fallbackimage}
-
     },
     save: SaveComponent,
 });
@@ -64,8 +64,18 @@ function EditComponent(props) {
                     </PanelRow>
                 </PanelBody>
             </InspectorControls>
+
+            <BlockControls>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.className === "grid-10"} onClick={()=>props.setAttributes({className: "grid-10"})}>Orange</ToolbarButton>
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.className === "grid-10-blue"} onClick={()=>props.setAttributes({className: "grid-10-blue"})}>Blue</ToolbarButton>
+                </ToolbarGroup>
+            </BlockControls>
+
             <div className="section-16 wf-section">
-                <div className="w-layout-grid grid-10">
+                <div className={`w-layout-grid ${props.attributes.className}`}>
                     <RichText
                         tagName="div" className="text-block-37"
                         value={props.attributes.text} onChange={handelTextChange}
