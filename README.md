@@ -40,7 +40,12 @@ This is a Customised WordPress themes specifically for the company Master Soluti
 | <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/94fb3d6f-bcc5-400f-a8d2-78de7c2eb6b7">| Section Reviews |
 | <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/7dd46936-9345-4ce7-a7c3-ef696b7c36a0"> | Blog Home |
 | <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/3c7d9e41-0bfe-4d13-9bdd-005761bd64f8"> | Blog |
-
+| <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/4df96516-2f58-445f-8088-c3418478f075"> | Section Search |
+| <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/982b982c-2ea2-4371-abb1-fe63d7ffb60f"> | MasterSolutions Header |
+| <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/64fcc2de-3346-421b-9087-4a734214e1f8"> | MasterSolutions Footer |
+|<img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/95f1acad-8a2d-4c34-8436-ce1b11ecf281"> | Section Map |
+| <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/90330a31-0e4f-422d-a1de-d6b7d5a8cf98"> | Contact Form |
+| <img width="500" alt="image" src="https://github.com/LinWenhao5/Master-Solutions-WordPress-Theme/assets/76943467/7943e372-9de9-47d7-abc0-76fdf90ab56c">| Simple Page/Blog |
 
 ## Installation
 You can download it in [release](https://github.com/LinWenhao5/Master-Solutions-WordPress-Thema/releases/tag/publish) and migrate it to your own wordpress site
