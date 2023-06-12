@@ -49,7 +49,7 @@ function add_theme_scripts()
     wp_enqueue_style('googleapis', '//fonts.googleapis.com');
     wp_enqueue_style('gstatic', '//fonts.gstatic.com');
 
-//	wp_enqueue_script( 'custom-script', 'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64073c6e318359715d3643ce', array(), null);
+	wp_enqueue_script( 'custom-script', 'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64073c6e318359715d3643ce', array(), null);
 
     wp_enqueue_script('msfilter@1/cmsfilter.js', "//cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js", NULL, '1.0', true);
     wp_enqueue_script('cmssort@1/cmssort.js', "//cdn.jsdelivr.net/npm/@finsweet/attributes-cmssort@1/cmssort.js", NULL, '1.0', true);
@@ -132,6 +132,18 @@ function MapKey($api) {
 }
 
 add_filter('acf/fields/google_map/api', 'MapKey');
+
+function theme_custom_logo() {
+	$defaults = array(
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+
+add_action( 'after_setup_theme', 'theme_custom_logo' );
+
 
 class PlaceholderBlock
 {

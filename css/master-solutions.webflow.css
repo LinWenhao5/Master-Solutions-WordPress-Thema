@@ -5814,6 +5814,7 @@ img {
 .div-block-55 {
   background-color: #f9e9d0;
   padding-bottom: 20px;
+  width: 20vw;
 }
 
 .div-block-56 {
@@ -5822,6 +5823,8 @@ img {
 
 .div-block-56-light-blue {
   background-color: #C7CBD8;
+  padding-bottom: 20px;
+  width: 20vw;
 }
 
 .div-block-57 {
@@ -5938,7 +5941,8 @@ img {
 
 .div-block-60 {
   width: 50vw;
-  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .div-block-60.tweede {

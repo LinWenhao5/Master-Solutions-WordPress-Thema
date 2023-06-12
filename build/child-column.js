@@ -256,23 +256,32 @@ function EditComponent(props) {
   }))));
 }
 function SaveComponent(props) {
+  const {
+    className,
+    title,
+    text,
+    imgURL
+  } = props.attributes;
+  const htmlString = `
+            <h1 class="heading-24">${title}</h1>
+            <div class="text-block-38">${text}</div>
+            <div class="div-block-58">
+                <img src="${imgURL}" loading="lazy" width="52"
+                     sizes="(max-width: 1279px) 52px, (max-width: 1439px) 4vw, 52px"
+                     srcSet="${imgURL}" 500w, "${imgURL}" 512w"
+                     alt=""
+                />
+            </div>`;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "w-node-_7b04c8fa-b584-060f-7234-85317b2096eb-495a224b",
-    className: props.attributes.className
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", {
-    className: "heading-24"
-  }, props.attributes.title), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "text-block-38"
-  }, props.attributes.text), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "div-block-58"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: props.attributes.imgURL,
-    loading: "lazy",
-    width: "52",
-    sizes: "(max-width: 1279px) 52px, (max-width: 1439px) 4vw, 52px",
-    srcSet: `${props.attributes.imgURL} 500w, ${props.attributes.imgURL} 512w`,
-    alt: ""
-  })));
+    className: props.attributes.className,
+    dangerouslySetInnerHTML: {
+      __html: htmlString
+    },
+    style: {
+      wordWrap: 'break-word'
+    }
+  });
 }
 })();
 
