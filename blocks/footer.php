@@ -2,30 +2,24 @@
 	<div class="w-layout-grid lynx-grid-footer-dark">
 		<div id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1b4-a63643cf">
 			<h4 id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1b5-a63643cf" class="header-diensten">Diensten</h4>
-			<a href="#" class="diensten">Diensten</a>
-			<a href="software.html" class="software">Software</a>
-			<a href="blogs.html" class="blog">Blog</a>
-			<a href="over-ons.html" class="over-ons">Over ons</a>
-			<a href="faq.html" class="faq">FAQ</a>
-			<a href="#" class="helpdesk">Helpdesk</a>
+			<a href="<?php echo site_url('/diensten'); ?>" class="faq">Diensten</a>
+            <a href="<?php echo site_url('/security-bridge'); ?>" class="faq">Security Bridge</a>
+			<a href="<?php echo site_url('/netwerkbeheer'); ?>" class="faq">Netwerkbeheer</a>
+			<a href="<?php echo site_url('/it-support'); ?>" class="faq">Helpdesk</a>
 		</div>
 		<div id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1c3-a63643cf">
-			<h4 class="heading-software">Software</h4>
-			<a href="#" class="diensten">Diensten</a>
-			<a href="software.html" class="software">Software</a>
-			<a href="blogs.html" class="blog">Blog</a>
-			<a href="over-ons.html" class="over-ons">Over ons</a>
-			<a href="faq.html" class="faq">FAQ</a>
-			<a href="#" class="helpdesk">Helpdesk</a>
+            <h4 id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1b5-a63643cf" class="header-diensten">Software</h4>
+            <a href="<?php echo site_url('/software'); ?>" class="faq">Software</a>
+            <a href="<?php echo site_url('/inspectiesoftware'); ?>" class="faq">Columbo Inspectiesoftware </a>
+            <a href="<?php echo site_url('/software-op-maat'); ?>" class="faq">Software op Maat</a>
+            <a href="<?php echo site_url('/business-intelligence'); ?>" class="faq">Business Intelligence</a>
 		</div>
 		<div id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1d2-a63643cf">
-			<h4 class="header-overige">Overige</h4>
-			<a href="#" class="diensten">Diensten</a>
-			<a href="software.html" class="software">Software</a>
-			<a href="blogs.html" class="blog">Blog</a>
-			<a href="over-ons.html" class="over-ons">Over ons</a>
-			<a href="faq.html" class="faq">FAQ</a>
-			<a href="#" class="helpdesk">Helpdesk</a>
+			<h4 class="header-overige">Master Solutions</h4>
+            <a href="<?php echo site_url('/'); ?>" class="faq">Home</a>
+            <a href="<?php echo site_url('/over-ons'); ?>" class="faq">Over Ons</a>
+            <a href="<?php echo site_url('/blog'); ?>" class="faq">Blog</a>
+            <a href="<?php echo site_url('/faq'); ?>" class="faq">FAQ</a>
 		</div>
 		<div id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1e1-a63643cf">
 			<h4 id="w-node-_3d1e02fc-0002-500b-0c07-f48b8b11b1e2-a63643cf" class="header-contact">Contact</h4>

@@ -10,7 +10,7 @@
 	        $logo_height = $custom_logo[2];
         ?>
         <a href="<?php echo site_url() ?>" aria-current="page" class="f-navigation-logo-link-2 w-inline-block w--current">
-            <img loading="lazy" src="<?php echo $logo_url?>" alt="" width="100">
+            <img loading="lazy" src="<?php echo $logo_url?>" alt="" width="150">
         </a>
         <?php
         }
