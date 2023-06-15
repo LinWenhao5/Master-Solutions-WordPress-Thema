@@ -23,8 +23,8 @@ registerBlockType("blocktheme/top-grid-large", {
         buttonText: {type: "string", default: "JA, IK HEB INTERESSE"},
         imgID: { type: "number" },
         imgURL: { type: "string" ,default: preloadImage.fallbackimage},
-        linkObject: {type: "object", default: {url: ""} }
-
+        linkObject: {type: "object", default: {url: ""} },
+        className: {type: "string", default: "div-block-50"}
     },
     save: SaveComponent,
 });
@@ -83,6 +83,12 @@ function EditComponent(props) {
                 <ToolbarGroup>
                     <ToolbarButton onClick={buttonHandler} icon={link} />
                 </ToolbarGroup>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.className === "div-block-50"} onClick={()=>props.setAttributes({className: "div-block-50"})}>Blue</ToolbarButton>
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <ToolbarButton isPressed={props.attributes.className === "div-block-50-orange"} onClick={()=>props.setAttributes({className: "div-block-50-orange"})}>Orange</ToolbarButton>
+                </ToolbarGroup>
             </BlockControls>
             <div className="div-block-49">
                 <img src={props.attributes.imgURL} loading="lazy"
@@ -90,7 +96,7 @@ function EditComponent(props) {
                    id="w-node-_6b025275-0e53-13d9-0ab8-460680e1d5a2-e3abbb81"
                    srcSet={`${props.attributes.imgURL} 500w, ${props.attributes.imgURL} 800w, ${props.attributes.imgURL} 860w`}
                    alt="" className="image-20" />
-                <div id="w-node-_04c3b03c-e56b-5f78-1063-a2e351498186-e3abbb81" className="div-block-50">
+                <div id="w-node-_04c3b03c-e56b-5f78-1063-a2e351498186-e3abbb81" className={props.attributes.className}>
                     <RichText
                         tagName="h1" className="heading-22"
                         value={props.attributes.title} onChange={(x)=>props.setAttributes({title: x})}
